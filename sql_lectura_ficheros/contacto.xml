@@ -1,0 +1,45 @@
+<?xml version = "1.0"?>
+<contact-info>    <!-- Nodo raíz o "padre" -->
+   <contact>      <!-- Hijo de <contact-info> -->
+      <type>Website</type>            <!-- Hijo de <contact> (nieto de <contact-info>) -->
+      <url>https://adalab.es/</url>   <!-- Hijo de <contact> (nieto de <contact-info>) -->
+   </contact>
+
+   <contact>  <!-- Hijo de <contact-info> -->
+      <type>Mail</type>
+      <address>hola@adalab.es</address>
+   </contact>
+
+   <socialmedia>  <!-- Hijo de <contact-info> -->
+      <profile>   <!-- Hijo de <socialmedia> (nieto de <contact-info>) -->
+         <name>Twitter</name> <!-- Hijo de <profile> (descendiente de tercer nivel de <contact-info>) -->
+         <url>https://twitter.com/Adalab_Digital</url> <!-- Hijo de <profile> (descendiente de tercer nivel de <contact-info>) -->
+      </profile>
+      
+      <profile>
+         <name>Facebook</name>
+         <url>https://www.facebook.com/AdalabDigital/</url>
+      </profile>
+
+      <profile>
+         <name>Linkedin</name>
+         <url>https://www.linkedin.com/school/adalab/</url>
+      </profile>
+      
+      <profile>
+         <name>Instagram</name>
+         <url>https://www.instagram.com/adalab_digital/</url>
+      </profile>
+
+      <profile>
+         <name>Youtube</name>
+         <url>https://www.youtube.com/channel/UCYmHARvTgsUrm5YdSYwzmDg</url>
+      </profile>
+   </socialmedia>
+</contact-info>
+
+<!-- 
+# Iterar sobre todos los hijos del nodo raíz
+for child in root:
+    print(child.tag)
+-->
