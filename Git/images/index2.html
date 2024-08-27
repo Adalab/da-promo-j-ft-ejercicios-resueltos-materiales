@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Ramas en Git 🌿</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="morado">Manejo de Ramas en Git 🌿</h1>
+        <p>En este ejemplo, vamos a aprender cómo crear y manejar ramas en Git utilizando la rama <code
+                class="morado">ramita</code>. ¡Empecemos! 🚀</p>
+
+        <div class="section">
+            <h2 style="text-align: left;">Crear y Verificar Ramas 🌱</h2>
+            <p>Primero, listamos las ramas actuales:</p>
+            <pre><code class="morado-claro">git branch</code></pre>
+            <p>Luego, creamos una nueva rama llamada <code class="morado">ramita</code>:</p>
+            <pre><code class="morado-claro">git checkout -b ramita </code></pre>
+            <p>Verificamos nuevamente las ramas para asegurarnos de que <code class="morado">ramita</code> fue creada:
+            </p>
+            <pre><code class="morado-claro">git branch</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Cambiar a la Nueva Rama 🚶‍♀️</h2>
+            <p>Cambiamos a la nueva rama <code class="morado">ramita</code>:</p>
+            <pre><code class="morado-claro">git checkout ramita</code></pre>
+            <p>Ahora estamos trabajando en la rama <code class="morado">ramita</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Subir la Rama al Repositorio Remoto 🌐</h2>
+            <p>Para subir la nueva rama al repositorio remoto, usamos el siguiente comando (la primera vez puede dar
+                error):</p>
+            <pre><code class="morado-claro">git push --set-upstream origin ramita</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Hacer Cambios en la Rama ✏️</h2>
+            <p>Realizamos algunos cambios en los archivos y luego los añadimos:</p>
+            <pre><code class="morado-claro">git add .</code></pre>
+            <p>Hacemos un commit de los cambios:</p>
+            <pre><code class="morado-claro">git commit -m "Add cambios ramita"</code></pre>
+            <p>Finalmente, subimos los cambios al repositorio remoto:</p>
+            <pre><code class="morado-claro">git push</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Fusionar la Rama con <em>main</em> 🌟</h2>
+            <p>Para fusionar <code class="morado">ramita</code> con <em>main</em>, primero cambiamos a la rama
+                <em>main</em>:</p>
+            <pre><code class="morado-claro">git checkout main</code></pre>
+            <p>Verificamos las ramas:</p>
+            <pre><code class="morado-claro">git branch</code></pre>
+            <p>Actualizamos la rama <em>main</em> con los cambios remotos:</p>
+            <pre><code class="morado-claro">git pull</code></pre>
+            <p>Fusionamos <code class="morado">ramita</code> con <em>main</em>:</p>
+            <pre><code class="morado-claro">git merge ramita</code></pre>
+            <p>Finalmente, subimos los cambios fusionados al repositorio remoto:</p>
+            <pre><code class="morado-claro">git add . + git commit -m"" + git push</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Eliminar una Rama 🗑️</h2>
+            <p>Para eliminar una rama local que ya no necesitamos:</p>
+            <pre><code class="morado-claro">git branch -d ramita</code></pre>
+            <p>Para eliminar una rama remota:</p>
+            <pre><code class="morado-claro">git push origin --delete ramita</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Resolver Conflictos de Fusión ⚔️</h2>
+            <p>Si encuentras un conflicto durante una fusión, Git te notificará. Para resolver conflictos:</p>
+            <p>- Edita los archivos en conflicto para solucionar los cambios manualmente.</p>
+            <p>- Marca los conflictos resueltos añadiendo los archivos:</p>
+            <pre><code class="morado-claro">git add [archivo_conflictivo]</code></pre>
+            <p>- Termina la fusión con un commit:</p>
+            <pre><code class="morado-claro">git commit</code></pre>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">Rebase de Ramas 🔄</h2>
+            <p>Para rebasar la rama <code class="morado">ramita</code> sobre <code>main</code>:</p>
+            <pre><code class="morado-claro">git checkout ramita</code></pre>
+            <pre><code class="morado-claro">git rebase main</code></pre>
+            <p>Sube los cambios después de rebasar:</p>
+            <pre><code class="morado-claro">git push --force-with-lease</code></pre>
+            <p>El rebase reescribe el historial de la rama, por lo que es importante hacerlo solo en ramas locales o
+                privadas.</p>
+        </div>
+
+        <div class="section">
+            <h2 style="text-align: left;">🔍 Ver las Ramas en el Repositorio 🔍</h2>
+            <p>Para ver las ramas que hemos creado localmente:</p>
+            <pre><code class="morado-claro">git branch</code></pre>
+            <p>Para ver las ramas remotas:</p>
+            <pre><code class="morado-claro">git branch -r</code></pre>
+            <p>Para ver todas las ramas (locales y remotas):</p>
+            <pre><code class="morado-claro">git branch -a</code></pre>
+            <p>Las ramas remotas aparecerán en rojo porque no son nuestras directamente.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

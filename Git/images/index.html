@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Ramas en Git</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content left-titles">
+        <h1>Tipos de Ramas en Git 🌿</h1>
+        <img src="https://miro.medium.com/v2/resize:fit:801/1*DhagidpZutkaCmAZobmzDQ.png" alt="Ramas">
+        <p>Cuando trabajamos con Git, hay varios tipos de ramas que suelen utilizarse comúnmente en un proyecto. Cada
+            rama tiene un propósito específico y facilita la organización y el desarrollo del proyecto. Aquí te explico
+            los tipos de ramas más comunes:</p>
+
+        <div class="section">
+            <h2>Rama <em>main</em> o <em>master</em> 🌟</h2>
+            <p><strong>Propósito:</strong> Esta es la rama principal de un repositorio. Por convención, <em>master</em>
+                era el nombre predeterminado, pero recientemente muchos proyectos han cambiado a <em>main</em> para
+                reflejar un lenguaje más inclusivo.</p>
+            <p><strong>Uso:</strong> Contiene el código de producción, es decir, la versión estable del proyecto que
+                está lista para ser desplegada o distribuida.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ramas de desarrollo (<em>develop</em>) 🛠️</h2>
+            <p><strong>Propósito:</strong> Es una rama paralela a <em>main</em> y se utiliza para integrar las
+                características y cambios que están en desarrollo.</p>
+            <p><strong>Uso:</strong> Una vez que las nuevas características están completas y probadas, se fusionan en
+                <em>develop</em> antes de ser finalmente integradas en <em>main</em>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Ramas de características (<em>feature</em>) ✨</h2>
+            <p><strong>Propósito:</strong> Cada rama de características se utiliza para desarrollar una nueva
+                funcionalidad o mejora específica del proyecto.</p>
+            <p><strong>Uso:</strong> Estas ramas suelen crearse a partir de <em>develop</em> y, una vez que el
+                desarrollo de la característica se completa, se fusionan de vuelta en <em>develop</em>.</p>
+            <p><strong>Convención de nombres:</strong> <code>feature/nueva-caracteristica</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ramas de corrección de errores (<em>bugfix</em>) 🐛</h2>
+            <p><strong>Propósito:</strong> Similar a las ramas de características, pero se enfocan en corregir errores
+                en el código.</p>
+            <p><strong>Uso:</strong> Estas ramas se crean a partir de <em>develop</em> y, una vez que el error se
+                corrige, la rama se fusiona de nuevo en <em>develop</em>.</p>
+            <p><strong>Convención de nombres:</strong> <code>bugfix/correccion-error</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ramas de soporte (<em>hotfix</em>) 🔥</h2>
+            <p><strong>Propósito:</strong> Se utilizan para aplicar correcciones rápidas a la rama <em>main</em> sin
+                pasar por <em>develop</em>. Son útiles para solucionar errores críticos que necesitan ser corregidos de
+                inmediato.</p>
+            <p><strong>Uso:</strong> Estas ramas se crean a partir de <em>main</em> y, una vez que la corrección está
+                lista, se fusionan tanto en <em>main</em> como en <em>develop</em> para mantener la coherencia.</p>
+            <p><strong>Convención de nombres:</strong> <code>hotfix/correccion-critica</code>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ramas de liberación (<em>release</em>) 🚀</h2>
+            <p><strong>Propósito:</strong> Preparar una nueva versión del proyecto para su lanzamiento.</p>
+            <p><strong>Uso:</strong> Estas ramas se crean a partir de <em>develop</em> cuando se ha completado el
+                desarrollo de una versión. En esta rama, se pueden realizar pruebas finales y correcciones de errores
+                menores. Después, la rama se fusiona en <em>main</em> y <em>develop</em>.</p>
+            <p><strong>Convención de nombres:</strong> <code>release/v1.0.0</code>.</p>
+        </div>
+
+        <div class="section centered-section">
+            <h2>✨✨✨ Recursos Interesantes ✨✨✨</h2>
+            <p class="highlight"> ¡Chicas! os dejo por aquí el link de la presentación de hoy 🔗<a
+                    href="https://docs.google.com/presentation/d/1a29GBvc-t7jKS4lJtfTuUCAbZth5SixpIamkyWDp2tg/edit?usp=sharing"
+                    target="_blank" class="link">aquí</a></p>
+            <p class="highlight">y este otro súper interesante con un montón más de instrucciones de git 🔗<a
+                    href="https://quickref.me/git.html" target="_blank" class="link">aquí</a></p>
+        </div>
+
+        <img src="https://i.gifer.com/8bo3.gif" alt="Gif animado" class="center half-size-gif">
+
+        <br>
+
+        <div class="section centered-section">
+            <h2>🔄🔄🔄 Ejemplo de flujo de trabajo con ramas 🔄🔄🔄</h2>
+            <br>
+            <p>
+                <strong>Inicio del proyecto:</strong> Se crea el repositorio con la rama <em>main</em>.<br>
+                <strong>Desarrollo inicial:</strong> Se crea una rama <em>develop</em> a partir de <em>main</em>.<br>
+                <strong>Nuevas características:</strong> Se crean ramas de características
+                (<code>feature/nueva-caracteristica</code>) a partir de <em>develop</em>. Una vez completadas, se
+                fusionan
+                en <em>develop</em>.<br>
+                <strong>Corrección de errores:</strong> Se crean ramas de corrección de errores
+                (<code>bugfix/correccion-error</code>) a partir de <em>develop</em>. Una vez corregidos los errores, se
+                fusionan en <em>develop</em>.<br>
+                <strong>Preparación para el lanzamiento:</strong> Se crea una rama de liberación
+                (<code>release/v1.0.0</code>) a partir de <em>develop</em>. Después de las pruebas finales, se fusiona
+                en
+                <em>main</em> y <em>develop</em>.<br>
+                <strong>Corrección rápida:</strong> Si se encuentra un error crítico en producción, se crea una rama de
+                soporte (<code>hotfix/correccion-critica</code>) a partir de <em>main</em>. Una vez corregido, se
+                fusiona en
+                <em>main</em> y <em>develop</em>.
+            </p>
+            <br>
+            <p><strong>Este flujo de trabajo permite una organización clara y estructurada del desarrollo, facilitando
+                    la
+                    colaboración y el mantenimiento del proyecto.</strong></p>
+        </div>
+    </div>
+</body>
+
+</html>

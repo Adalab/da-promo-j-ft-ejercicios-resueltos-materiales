@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+
+body {
+    font-family: 'Calibri', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background: url('https://img.freepik.com/foto-gratis/fondo-colorido-pastel-suave-abstracto_306501-871.jpg?size=626&ext=jpg&ga=GA1.1.58468267.1719249711&semt=ais_user') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+h2 {
+    color: purple;
+    margin-top: 40px; /* Espacio entre el título y el párrafo anterior */
+}
+
+.content {
+    max-width: 1000px; /* Máximo ancho de 1100px */
+    background-color: white;
+    padding: 20px;
+    padding-left: calc(3cm - 20px); /* Ajuste de padding para compensar el margen */
+    padding-right: calc(3cm - 20px); /* Ajuste de padding para compensar el margen */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3cm auto; /* Margen de al menos 3 cm auto */
+}
+
+/* Nueva regla CSS para centrar los títulos en index1 */
+.content.left-titles h2 {
+    text-align: left;
+}
+
+/* Regla específica para centrar los títulos de secciones específicas en index1 */
+.content.left-titles .centered-section h2 {
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 40px; /* Espacio adicional entre secciones */
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+p {
+    text-align: justify;
+    margin-top: 20px; /* Espacio entre el párrafo y el título siguiente */
+}
+
+p strong {
+    color: #9370DB; /* Morado más claro para "Propósito" y "Uso" */
+    font-size: larger; /* Incrementa el tamaño de fuente */
+    font-weight: bold;
+}
+
+pre code {
+    font-family: Arial, sans-serif; /* Mantener la fuente actual */
+    font-size: 1.2em; /* Medio punto más grande */
+    color: #9370DB; /* Morado más claro para los comandos */
+    font-weight: bold;
+}
+
+.morado {
+    color: purple;
+}
+
+.morado-claro {
+    color: #9370DB;
+    font-weight: bold;
+}
+
+.highlight {
+    text-align: center;
+    color: #9370DB; /* Morado claro */
+}
+
+.link {
+    color: blue;
+    font-size: inherit; /* Mismo tamaño de letra que el título */
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.center {
+    display: block;
+    margin: 20px auto;
+}
+
+.half-size-gif {
+    width: 50%; /* Ajustar el tamaño a la mitad */
+}
