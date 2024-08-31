@@ -1,1 +1,1 @@
-{"edad": [34, 37, 27, 30], "salario": [50000, 35000, 25000, 35000], "nombre": ["Ana", "Eva", "Marta", "Paula"], "mascota": ["gatos", "no tiene", "no tiene", "no tiene"], "experiencia": [5, 2, 1, 3], "nivel": ["Senior", "Mid", "Junior", "Mid"]}
+{"nombre": ["Ana", "Eva", "Marta", "Paula"], "edad": [34, 37, 27, 30], "experiencia": [5, 2, 1, 3], "nivel": ["Senior", "Mid", "Junior", "Mid"], "salario": [50000, 35000, 25000, 35000], "mascota": ["gatos", "no tiene", "no tiene", "no tiene"]}
